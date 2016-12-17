@@ -1,0 +1,9 @@
+<ion-view view-title="Book">
+	<ion-content class="padding">
+		<img ng-src="{{book.image_url}}">
+		<h2>{{book.title.__cdata}}</h2>
+		<h3>{{book.authors.author[0].name}}</h3>
+		<h3>{{book.description.__cdata}}</h3>
+		<h4>{{book.publication_day}}/{{book.publication_month}}/{{book.publication_year }}</h4>
+	</ion-content>
+</ion-view>

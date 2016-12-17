@@ -1,0 +1,20 @@
+<ion-view view-title="Search">
+	<ion-content>
+		<ion-refresher pulling-text="Pull to refresh..." on-refresh="search()">
+		</ion-refresher>
+		<div class="myBooks">
+			<label for="search">
+				<input type="text" name="Search Books" id="books" placeholder="Search Books..">
+			</label>
+			<button id="searchbook" ng-click="search()">Search</button>
+		</div>
+		<ion-list>
+			<ion-item ng-repeat="book in data" type="item-text-wrap" href="#/tab/account/{{book.best_book.id.__text}}">
+				<h4>{{book.best_book.title}}</h4>
+				<h5>{{book.average_rating}}</h5>
+				<img src="{{book.best_book.small_image_url}}">
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+</ion-view>
